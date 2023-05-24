@@ -6,6 +6,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const Image = styled.img`
+  width: 250px;
 `;
 
 const Name = styled.h1`
