@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const NavigationWrapper = styled.div`
-  // add styles here
+  
 `;
 
 function Navigation() {
@@ -11,7 +11,10 @@ function Navigation() {
         <NavigationWrapper>
             <Link to="/skills">Skills</Link>
             <Link to="/experience">Experience</Link>
-            {/* add other links here */}
+            <Link to="/portfolio">Portfolio</Link>
+            <Link to="/education">Education</Link>
+            <Link to="/certificates">Certificates</Link>
+            <Link to="/cv-download">CV Download</Link>
         </NavigationWrapper>
     );
 }

@@ -3,10 +3,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./components/header/Header";
 import Navigation from "./components/navigation/Navigation";
+import Experience from "./components/experience/Experience";
+import Skills from "./components/skills/Skills";
 
-//Dummy
-const Skills = () => <div>Skills</div>;
-const Experience = () => <div>Experience</div>;
+
 function App() {
     return (
         <Router>
