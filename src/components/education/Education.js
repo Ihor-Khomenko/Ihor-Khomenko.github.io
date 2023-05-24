@@ -7,15 +7,15 @@ const EducationItem = styled.div`
 `;
 
 const University = styled.h2`
-  // add styles here
+ 
 `;
 
 const Years = styled.h3`
-  // add styles here
+
 `;
 
 const Degree = styled.p`
-  // add styles here
+
 `;
 
 function Education() {

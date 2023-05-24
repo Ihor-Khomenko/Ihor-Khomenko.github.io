@@ -7,15 +7,15 @@ const PortfolioItem = styled.div`
 `;
 
 const ProjectName = styled.h2`
-  // add styles here
+
 `;
 
 const Role = styled.h3`
-  // add styles here
+
 `;
 
 const Description = styled.p`
-  // add styles here
+ 
 `;
 
 function Portfolio() {
