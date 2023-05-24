@@ -1,6 +1,8 @@
+// App.js
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import styled, { createGlobalStyle } from 'styled-components';
 import Header from "./components/header/Header";
 import Navigation from "./components/navigation/Navigation";
 import Experience from "./components/experience/Experience";
@@ -10,22 +12,55 @@ import Certificates from "./components/certificates/Certificates";
 import CVDownload from "./components/cvdownload/CVDownload";
 import Education from "./components/education/Education";
 
+const GlobalStyle = createGlobalStyle`
+  a:visited {
+    color: inherit;
+  }
+`;
+
+const AppContainer = styled.div`
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  padding: 10em;
+`;
+
+const LeftSide = styled.div`
+  background-color: lightyellow;
+  width: 50%;
+  min-height: 100vh;
+
+`;
+
+const RightSide = styled.div`
+  background-color: beige;
+  width: 50%;
+  min-height: 100vh;
+`;
+
 function App() {
     return (
         <Router>
-            <Header />
-            <Navigation />
-            <Routes>
-                <Route path="/skills" element={<Skills />} />
-                <Route path="/experience" element={<Experience />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/education" element={<Education />} />
-                <Route path="/certificates" element={<Certificates />} />
-                <Route path="/cv-download" element={<CVDownload />} />
-            </Routes>
+            <GlobalStyle />
+            <AppContainer>
+                <LeftSide>
+                    <Header />
+                </LeftSide>
+                <RightSide>
+                    <Navigation />
+                    <Routes>
+                        <Route path="/" element={<Skills />} />
+                        <Route path="/experience" element={<Experience />} />
+                        <Route path="/portfolio" element={<Portfolio />} />
+                        <Route path="/education" element={<Education />} />
+                        <Route path="/certificates" element={<Certificates />} />
+                        <Route path="/cv-download" element={<CVDownload />} />
+                    </Routes>
+                </RightSide>
+            </AppContainer>
         </Router>
     );
 }
 
 export default App;
-
