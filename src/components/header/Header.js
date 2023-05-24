@@ -20,7 +20,7 @@ const SocialMediaLinks = styled.div`
 function Header() {
     return (
         <HeaderWrapper>
-            <Image src="/src/img/photo.jpg" alt="Ihor Khomenko" />
+            <Image src="https://github.com/Ihor-Khomenko/cv/blob/main/src/img/photo.jpg?raw=true" alt="Ihor Khomenko" />
             <Name>Ihor Khomenko</Name>
             <Title>Software QA Engineer</Title>
             <SocialMediaLinks>
