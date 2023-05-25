@@ -1,4 +1,3 @@
-// CVDownload.js
 import React from 'react';
 
 function CVDownload() {

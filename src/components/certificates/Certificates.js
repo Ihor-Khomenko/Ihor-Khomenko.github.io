@@ -1,4 +1,3 @@
-// Certificates.js
 import React from 'react';
 
 function Certificates() {
