@@ -32,7 +32,7 @@ function Header() {
             <SocialMediaLinks>
                 <Link href="https://github.com/Ihor-Khomenko">GitHub</Link>
                 <Link href="https://www.linkedin.com/in/ihorkhomenko/">LinkedIn</Link>
-                <Link href="https://www.instagram.com/">Instagram</Link>
+                <Link href="https://www.instagram.com/ihor.khmnk/">Instagram</Link>
             </SocialMediaLinks>
         </HeaderWrapper>
     );

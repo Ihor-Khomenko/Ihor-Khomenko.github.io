@@ -23,20 +23,24 @@ const AppContainer = styled.div`
   background-color: lightblue;
   display: flex;
   justify-content: center;
-  padding: 10em;
+  padding: 6em;
+  position: relative; 
 `;
 
 const LeftSide = styled.div`
   background-color: lightyellow;
-  width: 50%;
-  min-height: 100vh;
-
+  width: 30%;
+  min-height: 75vh;
+  max-height: 75vh;
+  position: relative; // add this line
+  left: 2ch;
 `;
 
 const RightSide = styled.div`
   background-color: beige;
-  width: 50%;
+  width: 70%;
   min-height: 100vh;
+  padding-left: 4ch;
 `;
 
 function App() {

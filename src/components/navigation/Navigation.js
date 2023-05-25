@@ -1,21 +1,22 @@
+// Navigation.js
 import React from 'react';
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-const NavigationWrapper = styled.div`
-  
+const NavLink = styled(Link)`
+  margin-right: 1em; 
 `;
 
 function Navigation() {
     return (
-        <NavigationWrapper>
-            <Link to="/skills">Skills</Link>
-            <Link to="/experience">Experience</Link>
-            <Link to="/portfolio">Portfolio</Link>
-            <Link to="/education">Education</Link>
-            <Link to="/certificates">Certificates</Link>
-            <Link to="/cv-download">CV Download</Link>
-        </NavigationWrapper>
+        <nav>
+            <NavLink to="/">Skills</NavLink>
+            <NavLink to="/experience">Experience</NavLink>
+            <NavLink to="/portfolio">Portfolio</NavLink>
+            <NavLink to="/education">Education</NavLink>
+            <NavLink to="/certificates">Certificates</NavLink>
+            <NavLink to="/cv-download">CV Download</NavLink>
+        </nav>
     );
 }
 
