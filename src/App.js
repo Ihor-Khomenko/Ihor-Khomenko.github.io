@@ -32,7 +32,7 @@ const LeftSide = styled.div`
   width: 30%;
   min-height: 75vh;
   max-height: 75vh;
-  position: relative; // add this line
+  position: relative;
   left: 2ch;
 `;
 

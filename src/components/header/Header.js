@@ -8,19 +8,27 @@ const HeaderWrapper = styled.div`
 
 const Image = styled.img`
   width: 250px;
+  border-radius: 40%;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: -50px;
 `;
 
 const Name = styled.h1`
+  text-align: center;
 `;
 
 const Title = styled.h2`
+  text-align: center;
 `;
 
 const SocialMediaLinks = styled.div`
+  text-align: center;
 `;
 
 const Link = styled.a`
-  margin-right: 2em; // adjust the value as needed
+  margin-right: 1em; // adjust the value as needed
 `;
 
 function Header() {
