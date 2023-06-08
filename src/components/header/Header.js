@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import profileImage from '../../img/img.png';
+import { ReactComponent as GithubIcon } from '../../img/github.svg';
+import { ReactComponent as LinkedinIcon } from '../../img/linkedin.svg';
+import { ReactComponent as InstagramIcon } from '../../img/instagram.svg';
 
 const HeaderWrapper = styled.div`
   background-color: lightyellow;
@@ -30,16 +34,32 @@ const Link = styled.a`
   margin-right: 1em; // adjust the value as needed
 `;
 
+const Icon = styled.svg`
+  width: 24px; // adjust the value as needed
+  height: 24px; // adjust the value as needed
+  display: block;
+  margin: auto;
+`;
+
 function Header() {
     return (
         <HeaderWrapper>
-            <Image src="https://github.com/Ihor-Khomenko/cv/blob/main/src/img/photo.jpg?raw=true" alt="Ihor Khomenko" />
+            <Image src={profileImage} alt="Ihor Khomenko" />
             <Name>Ihor Khomenko</Name>
             <Title>Software QA Engineer</Title>
             <SocialMediaLinks>
-                <Link href="https://github.com/Ihor-Khomenko">GitHub</Link>
-                <Link href="https://www.linkedin.com/in/ihorkhomenko/">LinkedIn</Link>
-                <Link href="https://www.instagram.com/ihor.khmnk/">Instagram</Link>
+                <Link href="https://github.com/Ihor-Khomenko">
+                    <Icon as={GithubIcon} />
+
+                </Link>
+                <Link href="https://www.linkedin.com/in/ihorkhomenko/">
+                    <Icon as={LinkedinIcon} />
+
+                </Link>
+                <Link href="https://www.instagram.com/ihor.khmnk/">
+                    <Icon as={InstagramIcon} />
+
+                </Link>
             </SocialMediaLinks>
         </HeaderWrapper>
     );
