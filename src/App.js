@@ -23,7 +23,8 @@ const AppContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 6em;
-  position: relative; 
+  position: relative;
+  overflow: hidden;
 `;
 
 const LeftSide = styled.div`
@@ -33,6 +34,8 @@ const LeftSide = styled.div`
   max-height: 75vh;
   position: relative;
   left: 2ch;
+  border-radius: 15px;
+  z-index: 1;
 `;
 
 const RightSide = styled.div`
@@ -40,6 +43,7 @@ const RightSide = styled.div`
   width: 70%;
   min-height: 100vh;
   padding-left: 4ch;
+  border-radius: 15px;
 `;
 
 function App() {
