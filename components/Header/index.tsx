@@ -29,26 +29,28 @@ const Title = styled.h2`
 
 const SocialMediaLinks = styled.div`
   text-align: center;
-  margin-top: -20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 `
 
 const Link = styled.a`
   display: inline-block;
-  opacity: 0.7;
+  opacity: 0.8;
   transition: opacity 0.2s ease;
+  margin: 0 8px;
 
   &:hover {
     opacity: 1;
   }
-`
 
-const Icon = styled.svg`
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  margin: 0 8px;
-  vertical-align: middle;
-  fill: currentColor;
+  img {
+    filter: brightness(0.2);
+    transition: filter 0.2s ease;
+  }
+
+  &:hover img {
+    filter: brightness(0);
+  }
 `
 
 export default function Header() {
@@ -62,13 +64,13 @@ export default function Header() {
       />
       <SocialMediaLinks>
         <Link href="https://github.com/Ihor-Khomenko" target="_blank" rel="noopener noreferrer">
-          <Icon as={GithubIcon} />
+          <GithubIcon />
         </Link>
         <Link href="https://www.linkedin.com/in/ihorkhomenko/" target="_blank" rel="noopener noreferrer">
-          <Icon as={LinkedinIcon} />
+          <LinkedinIcon />
         </Link>
         <Link href="https://www.instagram.com/ihor.khmnk/" target="_blank" rel="noopener noreferrer">
-          <Icon as={InstagramIcon} />
+          <InstagramIcon />
         </Link>
       </SocialMediaLinks>
       <Name>Ihor Khomenko</Name>
