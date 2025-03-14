@@ -4,11 +4,14 @@ const nextConfig = {
     styledComponents: true,
   },
   reactStrictMode: true,
-  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
-  basePath: process.env.NODE_ENV === 'production' ? '/Ihor-Khomenko.github.io' : '',
+  output: 'export',
+  basePath: '/Ihor-Khomenko.github.io',
+  assetPrefix: '/Ihor-Khomenko.github.io/',
   images: {
-    unoptimized: process.env.NODE_ENV === 'production' ? true : undefined,
+    unoptimized: true,
+    domains: ['github.com'],
   },
+  trailingSlash: true,
 }
 
 module.exports = nextConfig 
