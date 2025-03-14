@@ -4,10 +4,10 @@ const nextConfig = {
     styledComponents: true,
   },
   reactStrictMode: true,
-  output: 'export',  // Enable static exports
-  basePath: '/Ihor-Khomenko.github.io', // Replace with your repository name
+  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
+  basePath: process.env.NODE_ENV === 'production' ? '/Ihor-Khomenko.github.io' : '',
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: process.env.NODE_ENV === 'production' ? true : undefined,
   },
 }
 
