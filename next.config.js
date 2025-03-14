@@ -1,17 +1,25 @@
 /** @type {import('next').NextConfig} */
+const isProduction = process.env.NODE_ENV === 'production';
+const repoName = 'Ihor-Khomenko.github.io';
+
 const nextConfig = {
   compiler: {
     styledComponents: true,
   },
   reactStrictMode: true,
-  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
-  basePath: process.env.NODE_ENV === 'production' ? '/Ihor-Khomenko.github.io' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/Ihor-Khomenko.github.io/' : '',
+  output: isProduction ? 'export' : undefined,
+  distDir: 'dist',
+  basePath: isProduction ? `/${repoName}` : '',
+  assetPrefix: isProduction ? `/${repoName}/` : '',
   images: {
-    unoptimized: process.env.NODE_ENV === 'production' ? true : undefined,
+    unoptimized: true,
     domains: ['github.com'],
   },
-  trailingSlash: process.env.NODE_ENV === 'production',
+  trailingSlash: true,
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false };
+    return config;
+  },
 }
 
 module.exports = nextConfig 

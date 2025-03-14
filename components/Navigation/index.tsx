@@ -49,28 +49,34 @@ const Icon = styled.svg`
 
 export default function Navigation() {
   const pathname = usePathname();
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
+  const isActive = (path: string) => {
+    const fullPath = `${basePath}${path}`;
+    return pathname === fullPath;
+  };
 
   return (
     <NavContainer>
-      <NavLink href="/" data-active={pathname === '/'}>
+      <NavLink href="/" data-active={isActive('/')}>
         <NavLinkContent>Skills</NavLinkContent>
       </NavLink>
-      <NavLink href="/experience" data-active={pathname === '/experience'}>
+      <NavLink href="/experience" data-active={isActive('/experience')}>
         <NavLinkContent>Experience</NavLinkContent>
       </NavLink>
-      <NavLink href="/portfolio" data-active={pathname === '/portfolio'}>
+      <NavLink href="/portfolio" data-active={isActive('/portfolio')}>
         <NavLinkContent>Portfolio</NavLinkContent>
       </NavLink>
-      <NavLink href="/education" data-active={pathname === '/education'}>
+      <NavLink href="/education" data-active={isActive('/education')}>
         <NavLinkContent>Education</NavLinkContent>
       </NavLink>
-      <NavLink href="/certificates" data-active={pathname === '/certificates'}>
+      <NavLink href="/certificates" data-active={isActive('/certificates')}>
         <NavLinkContent>
           <Icon as={CertificateIcon} />
           Certificates
         </NavLinkContent>
       </NavLink>
-      <NavLink href="/cv" data-active={pathname === '/cv'}>
+      <NavLink href="/cv" data-active={isActive('/cv')}>
         <NavLinkContent>CV Download</NavLinkContent>
       </NavLink>
     </NavContainer>
