@@ -15,10 +15,12 @@ const ProfileImage = styled(Image)`
   margin: auto;
   position: relative;
   top: -50px;
+  margin-bottom: -30px;
 `
 
 const Name = styled.h1`
   text-align: center;
+  margin-top: 1em;
 `
 
 const Title = styled.h2`
@@ -27,17 +29,28 @@ const Title = styled.h2`
 
 const SocialMediaLinks = styled.div`
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 `
 
 const Link = styled.a`
-  margin-right: 1em;
-`
+  display: inline-block;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+  margin: 0 8px;
 
-const Icon = styled.svg`
-  width: 24px;
-  height: 24px;
-  display: block;
-  margin: auto;
+  &:hover {
+    opacity: 1;
+  }
+
+  img {
+    filter: brightness(0.2);
+    transition: filter 0.2s ease;
+  }
+
+  &:hover img {
+    filter: brightness(0);
+  }
 `
 
 export default function Header() {
@@ -49,19 +62,19 @@ export default function Header() {
         width={250}
         height={250}
       />
-      <Name>Ihor Khomenko</Name>
-      <Title>Software QA Engineer</Title>
       <SocialMediaLinks>
         <Link href="https://github.com/Ihor-Khomenko" target="_blank" rel="noopener noreferrer">
-          <Icon as={GithubIcon} />
+          <GithubIcon />
         </Link>
         <Link href="https://www.linkedin.com/in/ihorkhomenko/" target="_blank" rel="noopener noreferrer">
-          <Icon as={LinkedinIcon} />
+          <LinkedinIcon />
         </Link>
         <Link href="https://www.instagram.com/ihor.khmnk/" target="_blank" rel="noopener noreferrer">
-          <Icon as={InstagramIcon} />
+          <InstagramIcon />
         </Link>
       </SocialMediaLinks>
+      <Name>Ihor Khomenko</Name>
+      <Title>Software QA Engineer</Title>
     </HeaderWrapper>
   )
 } 
