@@ -15,10 +15,12 @@ const ProfileImage = styled(Image)`
   margin: auto;
   position: relative;
   top: -50px;
+  margin-bottom: -30px;
 `
 
 const Name = styled.h1`
   text-align: center;
+  margin-top: 1em;
 `
 
 const Title = styled.h2`
@@ -27,17 +29,26 @@ const Title = styled.h2`
 
 const SocialMediaLinks = styled.div`
   text-align: center;
+  margin-top: -20px;
 `
 
 const Link = styled.a`
-  margin-right: 1em;
+  display: inline-block;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
 `
 
 const Icon = styled.svg`
-  width: 24px;
-  height: 24px;
-  display: block;
-  margin: auto;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin: 0 8px;
+  vertical-align: middle;
+  fill: currentColor;
 `
 
 export default function Header() {
@@ -49,8 +60,6 @@ export default function Header() {
         width={250}
         height={250}
       />
-      <Name>Ihor Khomenko</Name>
-      <Title>Software QA Engineer</Title>
       <SocialMediaLinks>
         <Link href="https://github.com/Ihor-Khomenko" target="_blank" rel="noopener noreferrer">
           <Icon as={GithubIcon} />
@@ -62,6 +71,8 @@ export default function Header() {
           <Icon as={InstagramIcon} />
         </Link>
       </SocialMediaLinks>
+      <Name>Ihor Khomenko</Name>
+      <Title>Software QA Engineer</Title>
     </HeaderWrapper>
   )
 } 
