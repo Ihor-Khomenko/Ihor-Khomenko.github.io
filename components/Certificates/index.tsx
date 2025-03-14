@@ -48,13 +48,13 @@ interface Certificate {
 const certificates: Certificate[] = [
   {
     name: "ISTQB® Certified Tester Foundation Level",
-    date: "2020",
-    link: "https://www.istqb.org/"
+    date: "2018",
+    link: "https://zertdb.isqi.org/en/download/certificate/token/Yg4688X8vNaEX29N"
   },
   {
-    name: "AWS Certified Cloud Practitioner",
-    date: "2021",
-    link: "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+    name: "OWASP TOP-10 Certified",
+    date: "2023",
+    link: "https://svyat.tech/certificate-owasp-web-ihor-khomenko"
   }
 ]
 

@@ -1,22 +1,38 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import styled from 'styled-components'
 import { CertificateIcon } from './icons'
 
 const NavContainer = styled.nav`
   padding: 1em;
+  display: flex;
+  gap: 1em;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2em;
 `
 
 const NavLink = styled(Link)`
-  display: block;
-  margin-bottom: 1em;
+  padding: 0.5em 1em;
   font-size: 1.1em;
   color: #333;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 8px 8px 0 0;
+  text-decoration: none;
+  position: relative;
 
   &:hover {
-    color: #666;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  &[data-active="true"] {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
   }
 `
 
@@ -32,27 +48,29 @@ const Icon = styled.svg`
 `
 
 export default function Navigation() {
+  const pathname = usePathname();
+
   return (
     <NavContainer>
-      <NavLink href="/">
+      <NavLink href="/" data-active={pathname === '/'}>
         <NavLinkContent>Skills</NavLinkContent>
       </NavLink>
-      <NavLink href="/experience">
+      <NavLink href="/experience" data-active={pathname === '/experience'}>
         <NavLinkContent>Experience</NavLinkContent>
       </NavLink>
-      <NavLink href="/portfolio">
+      <NavLink href="/portfolio" data-active={pathname === '/portfolio'}>
         <NavLinkContent>Portfolio</NavLinkContent>
       </NavLink>
-      <NavLink href="/education">
+      <NavLink href="/education" data-active={pathname === '/education'}>
         <NavLinkContent>Education</NavLinkContent>
       </NavLink>
-      <NavLink href="/certificates">
+      <NavLink href="/certificates" data-active={pathname === '/certificates'}>
         <NavLinkContent>
           <Icon as={CertificateIcon} />
           Certificates
         </NavLinkContent>
       </NavLink>
-      <NavLink href="/cv">
+      <NavLink href="/cv" data-active={pathname === '/cv'}>
         <NavLinkContent>CV Download</NavLinkContent>
       </NavLink>
     </NavContainer>

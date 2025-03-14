@@ -23,30 +23,30 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const AppContainer = styled.div`
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: lightblue;
   display: flex;
-  justify-content: center;
-  padding: 6em;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh;
+  padding: 2em;
+  gap: 2em;
+  background-color: #f0f8ff;
 `
 
 export const LeftSide = styled.div`
   background-color: lightyellow;
   width: 30%;
   min-height: 75vh;
-  max-height: 75vh;
-  position: relative;
-  left: 2ch;
   border-radius: 15px;
-  z-index: 1;
+  position: relative;
 `
 
 export const RightSide = styled.div`
-  background-color: beige;
+  background-color: white;
   width: 70%;
-  min-height: 100vh;
-  padding-left: 4ch;
+  min-height: 75vh;
   border-radius: 15px;
+  padding: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`
+
+export const ContentArea = styled.div`
+  padding: 1em;
 ` 
