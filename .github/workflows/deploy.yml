@@ -35,11 +35,7 @@ jobs:
       - name: Create .nojekyll file
         run: |
           touch out/.nojekyll
-          cp -r out/* .
-          rm -rf out
-          mkdir out
-          cp -r * out/ || true
-          rm -rf out/out
+          echo "Created .nojekyll file"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

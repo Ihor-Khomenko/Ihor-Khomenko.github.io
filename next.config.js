@@ -8,7 +8,6 @@ const nextConfig = {
   },
   reactStrictMode: true,
   output: isProduction ? 'export' : undefined,
-  distDir: 'dist',
   basePath: isProduction ? `/${repoName}` : '',
   assetPrefix: isProduction ? `/${repoName}/` : '',
   images: {
@@ -16,10 +15,6 @@ const nextConfig = {
     domains: ['github.com'],
   },
   trailingSlash: true,
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false };
-    return config;
-  },
 }
 
 module.exports = nextConfig 
