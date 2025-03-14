@@ -6,6 +6,7 @@ import { GithubIcon, LinkedinIcon, InstagramIcon } from './icons'
 
 const HeaderWrapper = styled.div`
   background-color: lightyellow;
+  padding-top: 70px;
 `
 
 const ProfileImage = styled(Image)`
@@ -14,8 +15,8 @@ const ProfileImage = styled(Image)`
   display: block;
   margin: auto;
   position: relative;
-  top: -50px;
-  margin-bottom: -30px;
+  top: -20px;
+  margin-bottom: 20px;
 `
 
 const Name = styled.h1`
@@ -29,7 +30,7 @@ const Title = styled.h2`
 
 const SocialMediaLinks = styled.div`
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
 `
 
