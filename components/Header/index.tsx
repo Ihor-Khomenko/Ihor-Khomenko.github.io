@@ -62,6 +62,8 @@ export default function Header() {
         alt="Ihor Khomenko"
         width={250}
         height={250}
+        priority={true}
+        quality={95}
       />
       <SocialMediaLinks>
         <Link href="https://github.com/Ihor-Khomenko" target="_blank" rel="noopener noreferrer">
