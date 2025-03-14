@@ -35,8 +35,13 @@ export default function Education() {
       <Title>Education</Title>
       <EducationItem>
         <University>Kharkiv Polytechnic Institute</University>
+        <Years>2024-2028</Years>
+        <Degree>PhD, Cybersecurity</Degree>
+      </EducationItem>
+      <EducationItem>
+        <University>Kharkiv Polytechnic Institute</University>
         <Years>2022-2023</Years>
-        <Degree>Masters degree, Cybersecurity</Degree>
+        <Degree>Masters degree with Honors, Cybersecurity</Degree>
       </EducationItem>
       <EducationItem>
         <University>Kharkiv Polytechnic Institute</University>

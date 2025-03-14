@@ -69,7 +69,7 @@ export default function Header() {
         <Link href="https://www.linkedin.com/in/ihorkhomenko/" target="_blank" rel="noopener noreferrer">
           <LinkedinIcon />
         </Link>
-        <Link href="https://www.instagram.com/ihor.khmnk/" target="_blank" rel="noopener noreferrer">
+        <Link href="https://www.instagram.com/ihor.khomenko/" target="_blank" rel="noopener noreferrer">
           <InstagramIcon />
         </Link>
       </SocialMediaLinks>
